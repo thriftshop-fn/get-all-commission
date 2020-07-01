@@ -1,36 +1,43 @@
-# Netlify Microservice Function
+# Get All Commission FN
 
-## Requirements:
-- netlify-cli
-- git/github
+## Development
 
-- [ ] Clone this Repo
+- cp .env.example .env
 
-```sh
-git clone https://github.com/thriftshop-fn/template
+- edit .env
+
+```toml
+GOOGLE_SERVICE_ACCOUNT_EMAIL=
+GOOGLE_SPREADSHEET_ID_FROM_URL=
+GOOGLE_PRIVATE_KEY=
 ```
 
-- [ ] cp .env.example .env anad edit .env
+- run `netlify dev` command
 
-- [ ] Create New API Function
+- test http://localhost:8888/api in postman
 
-```sh
-netlify functions:create --name api
+<details>
+<summary>JSON PAYLOAD</summary>
+ 
+```json
+{
+    "referral_code": "midascode"
+}
 ```
 
-- [ ] Install Any NPM Dependencies
+</details>
 
-```sh
-npm install package1 package2 package3
-```
+## Deploy
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/thriftshop-fn/get-all-commission)
 
-- [ ] Update netlify.toml template variable
+## Set Your Domain In Netlify
+
+- Go to [Settings](https://app.netlify.com/sites/tss-test/settings/general)
+
+- Click Change Site Name `${username}-tss-fn-get-all-commission.yourdomain.com`
+
+## Production
+
+- make post request with Needed *payload* to `${username}-tss-fn-get-all-commission.domain.com/api`
 
 
-- [ ] Modify 1 Click Deploy URL
-
-- Replace Button URL With Your Repo Link `https://github.com/thriftshop-fn/YOURFUNCTION`
-
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/thriftshop-fn/YOURFUNCTION)
-
-- [ ] Modify template-readme.md and save it as readme.md
