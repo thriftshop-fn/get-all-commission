@@ -1,7 +1,7 @@
 {
-  "name": "create-link-fn",
+  "name": "get-all-commission-fn",
   "version": "1.0.0",
-  "description": "## Usage",
+  "description": "Get List of Referral Commission",
   "author": "GoldCoders",
   "license": "ISC",
   "dependencies": {
